@@ -9,7 +9,7 @@ public class Course {
     private int ch;
     private boolean isAvailable;
     private String instructorName; //null by default
-    private int numberOfRegisteredStudents;
+
 
     public Course(String courseCode,int ch){
         this.isAvailable=true;
@@ -36,9 +36,6 @@ public class Course {
         return n;
     }
 
-    public void setInstructorName(String instructorName) {
-        this.instructorName = instructorName;
-    }
 
     public boolean isRegistered(Student s){
         for(int i=0;i<160;i++)
@@ -58,6 +55,7 @@ public class Course {
                 }
             }
             s.addHours(this.ch);
+
         }
     }
 
@@ -96,11 +94,15 @@ public class Course {
         return this.registeredStudents;
     }
 
-    public void teach(Professor p){
-        if(this.instructorName==null&&p.isAvailable()){
-            p.setCh(this.ch);
-            this.instructorName=p.getName();
-            p.addCourse(this);
-        }
+    public int getCh() {
+        return ch;
+    }
+
+    public void setInstructorName(String instructorName) {
+        this.instructorName = instructorName;
+    }
+
+    public String getInstructorName() {
+        return instructorName;
     }
 }

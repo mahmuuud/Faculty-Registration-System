@@ -15,7 +15,7 @@ public class Professor {
         this.name=name;
         this.age=age;
         this.ID=ID;
-        teachingCourses=new Course[3]; //maximum number for prof to teach is three courses
+        teachingCourses=new Course[3]; //maximum number of courses for prof to teach is three courses
         for(int i=0;i<3;i++)
             teachingCourses[i]=null;
 
@@ -27,19 +27,19 @@ public class Professor {
         else return false;
     }
 
-    public void addCourse(Course c){
-        if(this.isAvailable()){
+    public void teachCourse(Course c){
+        if(this.isAvailable()&&c.getInstructorName()==null){ //course is available with no instructor yet
             for(int i=0;i<3;i++)
                 if(this.teachingCourses[i]==null) {
                     this.teachingCourses[i] = c;
+                    this.ch+=c.getCh();
+                    c.setInstructorName(this.name);
                     break;
                 }
         }
     }
 
-    public void setCh(int ch) {
-        this.ch += ch;
-    }
+
 
     public String getName() {
         return name;
@@ -54,6 +54,7 @@ public class Professor {
         return this.ch*500;
     }
 
-
-
+    public int getCh() {
+        return ch;
+    }
 }
