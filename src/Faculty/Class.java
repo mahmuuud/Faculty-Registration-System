@@ -6,19 +6,23 @@ import java.util.Map;
 public class Class {
     private LinkedHashMap<String,Integer> reservedSlots; //time slots are 3 hours/slot by default
     private String name;
-    private int numberOfSeats;
 
-    public Class(String name,int numberOfSeats){
+
+    public Class(String name){
         this.name=name;
-        this.numberOfSeats=numberOfSeats;
         reservedSlots=new LinkedHashMap<>();
     }
 
-    public void reserve(String day,int time,int numberOfStudents){
+    public static String reserve(String day,int time){
         //you can reserve a class every 3 hours only;starting from 8AM to 8PM
-        if(this.isEmpty(day,time)&&numberOfStudents<=numberOfSeats) {
-            this.reservedSlots.put(day, time);
+        system.initializeRooms();
+        for(int i=0;i<system.classes.size();i++) {
+            if (system.classes.get(i).isEmpty(day, time)) {
+                system.classes.get(i).reservedSlots.put(day, time);
+                return system.classes.get(i).name;
+            }
         }
+        return null;
     }
 
     public boolean isEmpty(String day,int time){

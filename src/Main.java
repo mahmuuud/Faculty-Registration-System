@@ -1,10 +1,11 @@
-import Faculty.*;
-import GUI.FE_ASU;
-import Users.*;
+import GUI.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        FE_ASU fe_asu=new FE_ASU();
-        fe_asu.setVisible(true);
+//        addCourseForm f=new addCourseForm();
+//        f.setVisible(true);
+        HomePage h=new HomePage();
+        h.setVisible(true);
     }
 }

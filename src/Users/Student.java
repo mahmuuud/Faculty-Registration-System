@@ -5,15 +5,13 @@ public class Student {
     private int age;
     private String ID;
     private int registeredCreditHours;
-    private String level; //sophomore, junior, etc...
     private float GPA;
 
-    public Student(String name,int age,String ID,String level,float GPA){
+    public Student(String name,int age,String ID){
         this.name=name;
         this.age=age;
         this.ID=ID;
-        this.level=level;
-        this.GPA=GPA;
+        this.GPA=2.0f;
     }
 
     @Override
@@ -41,9 +39,7 @@ public class Student {
         return registeredCreditHours;
     }
 
-    public String getLevel() {
-        return level;
-    }
+
 
     public String getName() {
         return name;

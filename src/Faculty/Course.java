@@ -11,20 +11,27 @@ public class Course {
     private String instructorName; //null by default
 
 
-    public Course(String courseCode,int ch){
+    public Course(String courseCode,int ch,String instructorName){
         this.isAvailable=true;
         this.courseCode=courseCode;
         this.ch=ch;
         this.registeredStudents=new Student[160];
-
+        this.instructorName=instructorName;
         for(int i=0;i<160;i++)
             registeredStudents[i]=null;
     }
 
     @Override
+    public boolean equals(Object obj){
+        if(((Course)obj).instructorName.equals(this.instructorName)&&((Course)obj).courseCode.equals(this.courseCode))
+            return true;
+        return false;
+    }
+
+    @Override
     public String toString(){
         return this.courseCode+"\n"+"Instructor name: "+this.instructorName+"\n"+
-                "Credit Hours: "+this.ch;
+                "Credit Hours: "+this.ch+"\n"+this.isAvailable;
     }
 
     public int getNumberOfRegisteredStudents() {
@@ -58,6 +65,8 @@ public class Course {
 
         }
     }
+
+    public String getCourseCode(){return this.courseCode;}
 
     public void drop(Student s){
         if(isRegistered(s)){
