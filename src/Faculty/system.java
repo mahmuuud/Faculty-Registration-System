@@ -64,8 +64,13 @@ public class system {
         }
     }
 
-    public static void addProfessor(Professor p){
-        professors.add(p);
-
+    public static Professor getProfessor(String name){
+        for(int i=0;i<professors.size();i++){
+            if(professors.get(i).getName().equals(name))
+                return professors.get(i);
+        }
+        return null;
     }
+
+
 }

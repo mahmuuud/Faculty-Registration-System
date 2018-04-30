@@ -28,7 +28,7 @@ public class Professor {
     }
 
     public void teachCourse(Course c){
-        if(this.isAvailable()&&c.getInstructorName()==null){ //course is available with no instructor yet
+        if(this.isAvailable()&&c.getInstructorName()==null&&this.ch<9){ //course is available with no instructor yet
             for(int i=0;i<3;i++)
                 if(this.teachingCourses[i]==null) {
                     this.teachingCourses[i] = c;

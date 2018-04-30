@@ -92,12 +92,20 @@ public class RegistrationForm extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(student.isSelected()){
-                    Student s=new Student(name.getText(),Integer.parseInt(age.getText()),id.getText());
-                    system.addStudent(s);
-                    System.out.println(system.students);
+                    if(system.getStudent(name.getText(),id.getText())==null) {
+                        Student s = new Student(name.getText(), Integer.parseInt(age.getText()), id.getText());
+                        system.addStudent(s);
+                        name.setText(null);
+                        age.setText(null);
+                        id.setText(null);
+                        System.out.println(system.students);
+                    }
                 }
-                if(professor.isSelected()){
+                if(professor.isSelected()&&system.getProfessor(name.getText())==null){
                     Professor p=new Professor(name.getText(),Integer.parseInt(age.getText()),id.getText());
+                    name.setText(null);
+                    age.setText(null);
+                    id.setText(null);
                     system.addProf(p);
                 }
 

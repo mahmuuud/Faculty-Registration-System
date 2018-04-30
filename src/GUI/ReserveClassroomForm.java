@@ -76,11 +76,19 @@ public class ReserveClassroomForm extends JFrame {
             Submit.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    String d=day.getText();
-                    int t=Integer.parseInt(time.getText());
-                    String reservedClass=Class.reserve(d,t);
-                    JOptionPane optionPane=new JOptionPane("Reservation");
-                    optionPane.showMessageDialog(null,"Classroom "+reservedClass+" is reserved");
+                    if(time.getText().equals(null)&&day.getText()!=null&&Integer.parseInt(time.getText())<20) {
+                        String d = day.getText();
+                        int t = Integer.parseInt(time.getText());
+                        String reservedClass = Class.reserve(d, t);
+                        JOptionPane optionPane = new JOptionPane("Reservation");
+                        optionPane.showMessageDialog(null, "Classroom " + reservedClass + " is reserved");
+                        time.setText(null);
+                        day.setText(null);
+                    }
+                    else {
+                        JOptionPane optionPane=new JOptionPane("Error");
+                        optionPane.showMessageDialog(null,"Error");
+                    }
                 }
             });
 

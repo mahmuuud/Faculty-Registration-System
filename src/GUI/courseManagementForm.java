@@ -101,16 +101,25 @@ public class courseManagementForm extends JFrame {
                     Course course=system.getCourse(c);
                     if(add.isSelected()){
                         course.register(s);
+                        name.setText(null);
+                        code.setText(null);
+                        id.setText(null);
 
                     }
 
                     else if(drop.isSelected()){
                         course.drop(s);
+                        name.setText(null);
+                        code.setText(null);
+                        id.setText(null);
 
                     }
 
                     else if(withdraw.isSelected()){
                         course.withdraw(s);
+                        name.setText(null);
+                        code.setText(null);
+                        id.setText(null);
 
                     }
                 }

@@ -86,19 +86,36 @@ public class addCourseForm extends JFrame {
         Submit.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Course c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
-                if (add.isSelected()) {
+
+                String n=name.getText();
+                if (add.isSelected()&&!(close.isSelected())&&system.getProfessor(n)!=null
+                        &&(system.getProfessor(n).getCh())+Integer.parseInt(ch.getText())<=9) {
+                    Course c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
                     system.addCourse(c);
-                    close();
-                    System.out.println(c);
+                    name.setText(null);
+                    code.setText(null);
+                    ch.setText(null);
                 }
-                if(close.isSelected()&&system.isCourse(c)){
-                    c.close();
-                    close();
-                    System.out.println(c);
+                if(close.isSelected()&&!(add.isSelected())&&system.getProfessor(n)!=null
+                        &&(system.getProfessor(n).getCh())+Integer.parseInt(ch.getText())<=9){
+                    Course c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
+                    if(system.isCourse(c)) {
+                        c.close();
+                        name.setText(null);
+                        code.setText(null);
+                        ch.setText(null);
+                        System.out.println(c);
+                    }
+                    else {
+                        JOptionPane optionPane=new JOptionPane("Error");
+                        optionPane.showMessageDialog(null,"Error");
+
+                    }
                 }
 
-                else {
+                if(!(add.isSelected())&&!(close.isSelected())||add.isSelected()&&close.isSelected()
+                        ||system.getProfessor(n)==null||
+                        code.getText()==null&&name.getText()==null&&ch.getText()==null) {
                     JOptionPane optionPane=new JOptionPane("Error");
                     optionPane.showMessageDialog(null,"Error");
                 }
