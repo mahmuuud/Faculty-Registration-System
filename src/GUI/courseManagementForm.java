@@ -38,7 +38,7 @@ public class courseManagementForm extends JFrame {
         drop = new JRadioButton("Drop");
         withdraw=new JRadioButton("Withdraw");
         submitLbl = new JLabel("Submit", SwingConstants.CENTER);
-        this.setDefaultCloseOperation(3);
+        //this.setDefaultCloseOperation(3);
         this.setTitle("Course Add/Drop");
         this.setMinimumSize(new Dimension(600, 600));
         this.setLocation(700, 200);

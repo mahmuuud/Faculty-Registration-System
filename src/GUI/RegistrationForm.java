@@ -36,7 +36,7 @@ public class RegistrationForm extends JFrame {
         student = new JRadioButton("Student");
         professor = new JRadioButton("Professor");
         submitLbl = new JLabel("Submit", SwingConstants.CENTER);
-        this.setDefaultCloseOperation(3);
+        //this.setDefaultCloseOperation(3);
         this.setTitle("Registration");
         this.setMinimumSize(new Dimension(600, 600));
         this.setLocation(700, 200);

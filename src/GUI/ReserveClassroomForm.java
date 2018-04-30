@@ -31,7 +31,7 @@ public class ReserveClassroomForm extends JFrame {
             Time = new JLabel("Reservation Time");
             time = new JTextField();
             submitLbl = new JLabel("Reserve", SwingConstants.CENTER);
-            this.setDefaultCloseOperation(3);
+            //this.setDefaultCloseOperation(3);
             this.setTitle("Classrooms Management");
             this.setMinimumSize(new Dimension(600, 600));
             this.setLocation(700, 200);

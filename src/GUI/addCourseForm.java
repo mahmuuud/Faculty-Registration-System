@@ -32,7 +32,7 @@ public class addCourseForm extends JFrame {
         add=new JRadioButton("Add course");
         close=new JRadioButton("Close course");
         submitLbl=new JLabel("Submit",SwingConstants.CENTER);
-        this.setDefaultCloseOperation(3);
+        //this.setDefaultCloseOperation(3);
         this.setTitle("Course Management");
         this.setMinimumSize(new Dimension(600,600));
         this.setLocation(700,200);
