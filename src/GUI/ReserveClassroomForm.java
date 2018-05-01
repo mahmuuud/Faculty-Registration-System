@@ -76,7 +76,7 @@ public class ReserveClassroomForm extends JFrame {
             Submit.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    if(time.getText().equals(null)&&day.getText()!=null&&Integer.parseInt(time.getText())<20) {
+                    if(!(time.getText().isEmpty())&&!(day.getText().isEmpty())&&Integer.parseInt(time.getText())<20) {
                         String d = day.getText();
                         int t = Integer.parseInt(time.getText());
                         String reservedClass = Class.reserve(d, t);
@@ -85,9 +85,9 @@ public class ReserveClassroomForm extends JFrame {
                         time.setText(null);
                         day.setText(null);
                     }
-                    else {
+                    if(day.getText().isEmpty()||time.getText().isEmpty()) {
                         JOptionPane optionPane=new JOptionPane("Error");
-                        optionPane.showMessageDialog(null,"Error");
+                        optionPane.showMessageDialog(null,"Please fill the form");
                     }
                 }
             });

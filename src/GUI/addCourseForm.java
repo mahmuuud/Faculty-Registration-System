@@ -86,11 +86,12 @@ public class addCourseForm extends JFrame {
         Submit.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
+                Course c;
+                c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
                 String n=name.getText();
                 if (add.isSelected()&&!(close.isSelected())&&system.getProfessor(n)!=null
                         &&(system.getProfessor(n).getCh())+Integer.parseInt(ch.getText())<=9) {
-                    Course c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
+                    c.offer();
                     system.addCourse(c);
                     system.getProfessor(n).setCh(c.getCh());
                     System.out.println(system.getProfessor(n));
@@ -100,9 +101,7 @@ public class addCourseForm extends JFrame {
                     close.setSelected(false);
                     add.setSelected(false);
                 }
-                if(close.isSelected()&&!(add.isSelected())&&system.getProfessor(n)!=null
-                        &&(system.getProfessor(n).getCh())+Integer.parseInt(ch.getText())<=9){
-                    Course c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
+                if(close.isSelected()&&!(add.isSelected())&&system.getProfessor(n)!=null){
                     if(system.isCourse(c)) {
                         c.close();
                         System.out.println(system.getProfessor(n));
@@ -113,18 +112,21 @@ public class addCourseForm extends JFrame {
                         add.setSelected(false);
                         System.out.println(c);
                     }
-                    else {
-                        JOptionPane optionPane=new JOptionPane("Error");
-                        optionPane.showMessageDialog(null,"Error");
 
-                    }
                 }
 
-                if(!(add.isSelected())&&!(close.isSelected())||add.isSelected()&&close.isSelected()
-                        ||system.getProfessor(n)==null||
-                        code.getText()==null&&name.getText()==null&&ch.getText()==null) {
+                if(add.isSelected()&&(system.getProfessor(n).getCh()+Integer.parseInt(ch.getText()))>9){
                     JOptionPane optionPane=new JOptionPane("Error");
-                    optionPane.showMessageDialog(null,"Error");
+                    optionPane.showMessageDialog(null,"Professor reached the maximum number " +
+                            "of courses per semester");
+
+                }
+
+                if(add.isSelected()&&close.isSelected()
+                        ||system.getProfessor(n)==null||
+                        code.getText().isEmpty()||name.getText().isEmpty()||ch.getText().isEmpty()) {
+                    JOptionPane optionPane=new JOptionPane("Error");
+                    optionPane.showMessageDialog(null,"Please fill the form");
                 }
             }
         });

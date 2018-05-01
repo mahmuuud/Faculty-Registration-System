@@ -96,22 +96,35 @@ public class courseManagementForm extends JFrame {
                 String c=code.getText();
                 String n=name.getText();
                 String iD=id.getText();
+                Student s=system.getStudent(n,iD);
+                Course course=system.getCourse(c);
                 if(system.getCourse(c)!=null&&system.getStudent(n,iD)!=null){
-                    Student s=system.getStudent(n,iD);
-                    Course course=system.getCourse(c);
-                    if(add.isSelected()){
-                        course.register(s);
-                        System.out.println(s);
-                        name.setText(null);
-                        code.setText(null);
-                        id.setText(null);
-                        add.setSelected(false);
-                        drop.setSelected(false);
-                        withdraw.setSelected(false);
+                    if(add.isSelected()&&!course.isRegistered(system.getStudent(n,iD))&&course.isAvailable()){
+                        if(course.isAvailable()){
+                            course.register(s);
+                            System.out.println(s);
+                            name.setText(null);
+                            code.setText(null);
+                            id.setText(null);
+                            add.setSelected(false);
+                            drop.setSelected(false);
+                            withdraw.setSelected(false);
+                        }
 
                     }
 
-                    else if(drop.isSelected()){
+                    if(add.isSelected()&& !(course.isAvailable())){
+                        JOptionPane optionPane=new JOptionPane("Error");
+                        optionPane.showMessageDialog(null,"The Course Registration " +
+                                "is Currently Closed");
+                    }
+
+                    if(add.isSelected()&&course.isRegistered(system.getStudent(n,iD))){
+                        JOptionPane optionPane=new JOptionPane("Error");
+                        optionPane.showMessageDialog(null,"Student is registered at the course");
+                    }
+
+                    else if(drop.isSelected()&&course.isRegistered(s)){
                         course.drop(s);
                         System.out.println(s);
                         name.setText(null);
@@ -122,7 +135,7 @@ public class courseManagementForm extends JFrame {
                         withdraw.setSelected(false);
                     }
 
-                    else if(withdraw.isSelected()){
+                    else if(withdraw.isSelected()&&course.isRegistered(s)){
                         course.withdraw(s);
                         System.out.println(s);
                         name.setText(null);
@@ -133,11 +146,18 @@ public class courseManagementForm extends JFrame {
                         withdraw.setSelected(false);
 
                     }
+                    if(withdraw.isSelected()&&!course.isRegistered(s)||drop.isSelected()&&!course.isRegistered(s)){
+                        JOptionPane optionPane=new JOptionPane("Error");
+                        optionPane.showMessageDialog(null,"Student is not registered at the course");
+
+                    }
                 }
                 else{
                     JOptionPane optionPane=new JOptionPane("Error");
                     optionPane.showMessageDialog(null,"Error");
                 }
+
+
             }
         });
 

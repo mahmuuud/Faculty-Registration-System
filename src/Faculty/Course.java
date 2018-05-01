@@ -12,7 +12,6 @@ public class Course {
 
 
     public Course(String courseCode,int ch,String instructorName){
-        this.isAvailable=true;
         this.courseCode=courseCode;
         this.ch=ch;
         this.registeredStudents=new Student[160];
@@ -30,8 +29,8 @@ public class Course {
 
     @Override
     public String toString(){
-        return this.courseCode+"\n"+"Instructor name: "+this.instructorName+"\n"+
-                "Credit Hours: "+this.ch+"\n"+this.isAvailable;
+        return "\n"+"Course:"+"\n"+this.courseCode+"\n"+"Instructor name: "+this.instructorName+"\n"+
+                "Credit Hours: "+this.ch+"\n"+"Is available: "+this.isAvailable;
     }
 
     public int getNumberOfRegisteredStudents() {
@@ -43,6 +42,9 @@ public class Course {
         return n;
     }
 
+    public boolean isAvailable() {
+        return isAvailable;
+    }
 
     public boolean isRegistered(Student s){
         for(int i=0;i<160;i++)
@@ -58,10 +60,11 @@ public class Course {
             for(int i=0;i<160;i++){
                 if(this.registeredStudents[i]==null){
                     this.registeredStudents[i]=s;
+                    this.registeredStudents[i].addHours(this.ch);
                     break;
                 }
             }
-            s.addHours(this.ch);
+
 
         }
     }
@@ -72,8 +75,8 @@ public class Course {
         if(isRegistered(s)){
             for(int i=0;i<160;i++)
                 if(this.registeredStudents[i]==s) {
-                    registeredStudents[i] = null;
                     registeredStudents[i].addHours(-this.ch);
+                    registeredStudents[i] = null;
                     break;
                 }
         }
@@ -96,11 +99,6 @@ public class Course {
 
     public void close(){
         this.isAvailable=false;
-        system.getProfessor(this.instructorName).setCh(-this.ch);
-        for(int i=0;i<160;i++){
-           if(this.registeredStudents[i]!=null)
-               this.registeredStudents[i].addHours(-this.ch);
-        }
 
     }
 

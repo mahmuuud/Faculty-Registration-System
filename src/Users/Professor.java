@@ -49,7 +49,7 @@ public class Professor {
 
     @Override
     public String toString(){
-        return "Name: "+this.name+"\n"+"ID: "+this.ID+"\n"+"Salary: "+this.getSalary()+" EGP";
+        return "\n"+"Professor: "+"\n"+"Name: "+this.name+"\n"+"ID: "+this.ID+"\n"+"Salary: "+this.getSalary()+" EGP";
     }
 
     public int getSalary(){
