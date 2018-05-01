@@ -99,10 +99,11 @@ public class courseManagementForm extends JFrame {
                 Student s=system.getStudent(n,iD);
                 Course course=system.getCourse(c);
                 if(system.getCourse(c)!=null&&system.getStudent(n,iD)!=null){
-                    if(add.isSelected()&&!course.isRegistered(system.getStudent(n,iD))&&course.isAvailable()){
+                    if(add.isSelected()&&!course.isRegistered(system.getStudent(n,iD))&&course.isAvailable()
+                            &&(system.getStudent(n,iD).getRegisteredCreditHours())+3<=20){
                         if(course.isAvailable()){
-                            course.register(s);
-                            System.out.println(s);
+                            course.register(system.getStudent(n,iD));
+                            System.out.println(system.getStudent(n,iD));
                             name.setText(null);
                             code.setText(null);
                             id.setText(null);

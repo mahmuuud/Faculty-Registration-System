@@ -87,10 +87,11 @@ public class addCourseForm extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Course c;
-                c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
+
                 String n=name.getText();
                 if (add.isSelected()&&!(close.isSelected())&&system.getProfessor(n)!=null
                         &&(system.getProfessor(n).getCh())+Integer.parseInt(ch.getText())<=9) {
+                    c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
                     c.offer();
                     system.addCourse(c);
                     system.getProfessor(n).setCh(c.getCh());
@@ -102,16 +103,18 @@ public class addCourseForm extends JFrame {
                     add.setSelected(false);
                 }
                 if(close.isSelected()&&!(add.isSelected())&&system.getProfessor(n)!=null){
-                    if(system.isCourse(c)) {
-                        c.close();
+                    if(system.getCourse(code.getText())!=null) {
+                        system.getCourse(code.getText()).close();
+                        System.out.println(system.getCourse(code.getText()));
                         System.out.println(system.getProfessor(n));
                         name.setText(null);
                         code.setText(null);
                         ch.setText(null);
                         close.setSelected(false);
                         add.setSelected(false);
-                        System.out.println(c);
+
                     }
+
 
                 }
 

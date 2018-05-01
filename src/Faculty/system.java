@@ -31,13 +31,7 @@ public class system {
         professors.add(p);
     }
 
-    public static boolean isCourse(Course c){
-        for (int i =0;i<courses.size();i++){
-            if(courses.get(i).equals(c))
-                return true;
-        }
-        return false;
-    }
+
 
     public static boolean isStudent(Student s){
         for (int i =0;i<students.size();i++){
