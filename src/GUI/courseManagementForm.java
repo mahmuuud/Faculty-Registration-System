@@ -105,6 +105,9 @@ public class courseManagementForm extends JFrame {
                         name.setText(null);
                         code.setText(null);
                         id.setText(null);
+                        add.setSelected(false);
+                        drop.setSelected(false);
+                        withdraw.setSelected(false);
 
                     }
 
@@ -114,7 +117,9 @@ public class courseManagementForm extends JFrame {
                         name.setText(null);
                         code.setText(null);
                         id.setText(null);
-
+                        add.setSelected(false);
+                        drop.setSelected(false);
+                        withdraw.setSelected(false);
                     }
 
                     else if(withdraw.isSelected()){
@@ -123,6 +128,9 @@ public class courseManagementForm extends JFrame {
                         name.setText(null);
                         code.setText(null);
                         id.setText(null);
+                        add.setSelected(false);
+                        drop.setSelected(false);
+                        withdraw.setSelected(false);
 
                     }
                 }

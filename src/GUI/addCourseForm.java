@@ -97,6 +97,8 @@ public class addCourseForm extends JFrame {
                     name.setText(null);
                     code.setText(null);
                     ch.setText(null);
+                    close.setSelected(false);
+                    add.setSelected(false);
                 }
                 if(close.isSelected()&&!(add.isSelected())&&system.getProfessor(n)!=null
                         &&(system.getProfessor(n).getCh())+Integer.parseInt(ch.getText())<=9){
@@ -107,6 +109,8 @@ public class addCourseForm extends JFrame {
                         name.setText(null);
                         code.setText(null);
                         ch.setText(null);
+                        close.setSelected(false);
+                        add.setSelected(false);
                         System.out.println(c);
                     }
                     else {

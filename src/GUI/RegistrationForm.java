@@ -98,6 +98,8 @@ public class RegistrationForm extends JFrame {
                         name.setText(null);
                         age.setText(null);
                         id.setText(null);
+                        professor.setSelected(false);
+                        student.setSelected(false);
                         System.out.println(system.students);
                     }
                 }
@@ -107,6 +109,8 @@ public class RegistrationForm extends JFrame {
                     name.setText(null);
                     age.setText(null);
                     id.setText(null);
+                    professor.setSelected(false);
+                    student.setSelected(false);
 
                 }
 
@@ -114,6 +118,8 @@ public class RegistrationForm extends JFrame {
                         ||!(professor.isSelected())&&!(student.isSelected())) {
                     JOptionPane optionPane=new JOptionPane("Error");
                     JOptionPane.showMessageDialog(null,"Please select the member's role");
+                    professor.setSelected(false);
+                    student.setSelected(false);
 
                 }
             }
