@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77f32f33-dc5c-4dd2-9798-7e6ebacd23b4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diagrams/Detailed Class Diagram.vsdx" beforeDir="false" afterPath="$PROJECT_DIR$/Diagrams/Detailed Class Diagram.vsdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documents/Nouns'Extraction.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Faculty_Registeration_System/GUI/RegistrationForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Faculty_Registeration_System/GUI/RegistrationForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Faculty_Registeration_System/GUI/ReserveClassroomForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Faculty_Registeration_System/GUI/ReserveClassroomForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Faculty_Registeration_System/GUI/courseManagementForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Faculty_Registeration_System/GUI/courseManagementForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Faculty/system.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Faculty/system.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RegistrationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ReserveClassroomForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ReserveClassroomForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/addCourseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/addCourseForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/courseManagementForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/courseManagementForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Professor.java" afterDir="false" />
-    </list>
+    <list default="true" id="77f32f33-dc5c-4dd2-9798-7e6ebacd23b4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Student.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Users/Student.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
@@ -46,7 +33,7 @@
       <file leaf-file-name="Course.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Faculty/Course.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="595">
               <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,8 +45,8 @@
       <file leaf-file-name="Professor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Users/Professor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+            <state relative-caret-position="510">
+              <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -67,7 +54,7 @@
       <file leaf-file-name="system.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Faculty/system.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
+            <state relative-caret-position="969">
               <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -76,15 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReserveClassroomForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReserveClassroomForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/ReserveClassroomForm.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
               <caret line="78" column="108" selection-start-line="78" selection-start-column="108" selection-end-line="78" selection-end-column="108" />
-              <folding>
-                <element signature="e#2718#3466#0" expanded="true" />
-                <element signature="e#3465#3466#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,8 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -181,6 +162,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,7 +232,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32965517" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -273,6 +255,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32965517" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32965517" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -298,9 +281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -372,9 +352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -455,9 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
           <caret line="79" column="12" selection-start-line="78" selection-start-column="6" selection-end-line="84" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,9 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
           <caret line="79" column="12" selection-start-line="78" selection-start-column="6" selection-end-line="84" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Users/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -633,7 +597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Faculty/Course.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="595">
           <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -672,8 +636,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Users/Professor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+        <state relative-caret-position="510">
+          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -689,7 +653,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Faculty/system.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
+        <state relative-caret-position="969">
           <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -701,10 +665,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="78" column="108" selection-start-line="78" selection-start-column="108" selection-end-line="78" selection-end-column="108" />
-          <folding>
-            <element signature="e#2718#3466#0" expanded="true" />
-            <element signature="e#3465#3466#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Users/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
