@@ -103,13 +103,15 @@ public class RegistrationForm extends JFrame {
                 }
                 if(professor.isSelected()&&system.getProfessor(name.getText())==null){
                     Professor p=new Professor(name.getText(),Integer.parseInt(age.getText()),id.getText());
+                    system.addProf(p);
                     name.setText(null);
                     age.setText(null);
                     id.setText(null);
-                    system.addProf(p);
+
                 }
 
-                if(professor.isSelected()&&student.isSelected()||!(professor.isSelected())&&!(student.isSelected())) {
+                if(professor.isSelected()&&student.isSelected()&&name.getText()==null
+                        ||!(professor.isSelected())&&!(student.isSelected())) {
                     JOptionPane optionPane=new JOptionPane("Error");
                     JOptionPane.showMessageDialog(null,"Please select the member's role");
 

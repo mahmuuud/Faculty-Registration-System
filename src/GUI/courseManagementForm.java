@@ -101,6 +101,7 @@ public class courseManagementForm extends JFrame {
                     Course course=system.getCourse(c);
                     if(add.isSelected()){
                         course.register(s);
+                        System.out.println(s);
                         name.setText(null);
                         code.setText(null);
                         id.setText(null);
@@ -109,6 +110,7 @@ public class courseManagementForm extends JFrame {
 
                     else if(drop.isSelected()){
                         course.drop(s);
+                        System.out.println(s);
                         name.setText(null);
                         code.setText(null);
                         id.setText(null);
@@ -117,6 +119,7 @@ public class courseManagementForm extends JFrame {
 
                     else if(withdraw.isSelected()){
                         course.withdraw(s);
+                        System.out.println(s);
                         name.setText(null);
                         code.setText(null);
                         id.setText(null);

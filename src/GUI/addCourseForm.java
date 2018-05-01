@@ -92,6 +92,8 @@ public class addCourseForm extends JFrame {
                         &&(system.getProfessor(n).getCh())+Integer.parseInt(ch.getText())<=9) {
                     Course c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
                     system.addCourse(c);
+                    system.getProfessor(n).setCh(c.getCh());
+                    System.out.println(system.getProfessor(n));
                     name.setText(null);
                     code.setText(null);
                     ch.setText(null);
@@ -101,6 +103,7 @@ public class addCourseForm extends JFrame {
                     Course c=new Course(code.getText(), Integer.parseInt(ch.getText()), name.getText());
                     if(system.isCourse(c)) {
                         c.close();
+                        System.out.println(system.getProfessor(n));
                         name.setText(null);
                         code.setText(null);
                         ch.setText(null);

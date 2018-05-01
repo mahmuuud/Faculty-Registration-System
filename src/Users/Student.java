@@ -16,7 +16,7 @@ public class Student {
 
     @Override
     public String toString(){
-        return "name: " +this.name+"\n"+"ID: "+this.ID;
+        return "name: " +this.name+"\n"+"ID: "+this.ID+"\n"+"Payment: "+this.getPayment()+" EGP";
     }
 
     @Override

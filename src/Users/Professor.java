@@ -28,7 +28,7 @@ public class Professor {
     }
 
     public void teachCourse(Course c){
-        if(this.isAvailable()&&c.getInstructorName()==null&&this.ch<9){ //course is available with no instructor yet
+        if(this.isAvailable()&&c.getInstructorName()==null){ //course is available with no instructor yet
             for(int i=0;i<3;i++)
                 if(this.teachingCourses[i]==null) {
                     this.teachingCourses[i] = c;
@@ -39,7 +39,9 @@ public class Professor {
         }
     }
 
-
+    public void setCh(int ch) {
+        this.ch += ch;
+    }
 
     public String getName() {
         return name;
@@ -47,7 +49,7 @@ public class Professor {
 
     @Override
     public String toString(){
-        return "Name: "+this.name+"\n"+"ID: "+this.ID;
+        return "Name: "+this.name+"\n"+"ID: "+this.ID+"\n"+"Salary: "+this.getSalary()+" EGP";
     }
 
     public int getSalary(){

@@ -96,6 +96,11 @@ public class Course {
 
     public void close(){
         this.isAvailable=false;
+        system.getProfessor(this.instructorName).setCh(-this.ch);
+        for(int i=0;i<160;i++){
+           if(this.registeredStudents[i]!=null)
+               this.registeredStudents[i].addHours(-this.ch);
+        }
 
     }
 
