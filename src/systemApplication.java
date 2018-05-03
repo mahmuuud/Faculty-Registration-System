@@ -1,6 +1,6 @@
 import GUI.*;
 
-public class Main {
+public class systemApplication {
 
     public static void main(String[] args) {
         HomePage h=new HomePage();

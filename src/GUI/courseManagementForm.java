@@ -114,6 +114,13 @@ public class courseManagementForm extends JFrame {
 
                     }
 
+                    if(add.isSelected()&&!course.isRegistered(system.getStudent(n,iD))&&course.isAvailable()
+                            &&(system.getStudent(n,iD).getRegisteredCreditHours())+3>20){
+                        JOptionPane optionPane=new JOptionPane("Error");
+                        optionPane.showMessageDialog(null,"Student reached the maximum " +
+                                "number of credit hours for 1 semester");
+                    }
+
                     if(add.isSelected()&& !(course.isAvailable())){
                         JOptionPane optionPane=new JOptionPane("Error");
                         optionPane.showMessageDialog(null,"The Course Registration " +
