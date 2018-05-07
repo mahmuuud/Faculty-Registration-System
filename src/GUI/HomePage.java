@@ -23,8 +23,9 @@ public class HomePage extends JFrame {
         //initialize components
         this.setTitle("Home page");
         this.setDefaultCloseOperation(3);
-        this.setLocation(700,200);
+        Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
         this.setMinimumSize(new Dimension(600,700));
+        this.setLocation((screenSize.width-this.getWidth())/2,(screenSize.height-this.getHeight())/2);
         this.setResizable(false);
         this.setLayout(new BorderLayout());
         topPnl=new JPanel();
